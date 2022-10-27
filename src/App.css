@@ -1,38 +1,104 @@
-.App {
-  text-align: center;
+.logo{
+    font-size: 2rem;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.card{
+   height: 200px;
+   cursor: pointer;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.card:hover{
+    box-shadow: 0px 0px 5px 2px #ccc;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.add-word{
+    font-size: 4rem;
 }
 
-.App-link {
-  color: #61dafb;
+
+/*
+* modal-build
+*/
+
+.bg-modal{
+    display: none;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color:rgba(0, 0, 0, 0.5);
+    z-index: 1;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.modal-build{
+    position: relative;
+    width: 50%;
+    height: 45%;
+    background-color: white;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    border-radius: 10px;
+}
+
+.close-modal{
+    position: absolute;
+    right:-15px;
+    top:-15px;
+    cursor: pointer;
+    width:40px;
+    text-align: center;
+    color:white;
+    line-height: 40px;
+    height:40px;
+    border-radius:20px;
+    background-color: #C82333;
+    font-weight: bold;
+    user-select: none;
+}
+
+.modal-header{
+    display: flex;
+    flex-direction: column;
+}
+
+.modal-body form{
+    padding: 20px;
+}
+
+
+
+@media (max-width: 700px){
+    .modal-build{
+        position: relative;
+        width: 90%;
+        height: 60%;
+        background-color: white;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%,-50%);
+        border-radius: 10px;
+    }
+}
+
+
+/*MODAL LOGIN */
+
+.bg-modal-login{
+    display: none;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color:rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+
+/*FIM MODAL LOGIN */
+
+.text-logado{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    font-weight: bold;
 }
